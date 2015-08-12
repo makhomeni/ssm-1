@@ -1,6 +1,8 @@
 package net.softengine.ssm.admin;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,5 +13,6 @@ import org.springframework.stereotype.Controller;
  */
 
 @Controller
-public class AdminController {
+@RequestMapping("/admin/")
+public class AdminController  {
 }
