@@ -21,7 +21,7 @@ public class Marks  implements Serializable{
     private Integer id;
 
     private MarksSheet marksSheet;
-
+@ManyToOne
     private Student student;
 
     private String written;
