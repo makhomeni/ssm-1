@@ -19,4 +19,20 @@ public class User implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
+
+    private String active;
+
+    private String Token;
+
+    private String name;
+
+    private String addressLineOne;
+
+    private String addressLineTwo;
+
+    private String phone;
+
+    private String sex;
+
+    private String email;
 }

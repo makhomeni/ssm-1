@@ -1,5 +1,8 @@
 package net.softengine.ssm.security.model;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: SHAHIN_PC
@@ -7,5 +10,18 @@ package net.softengine.ssm.security.model;
  * Time: 11:01 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Token {
+
+@Entity
+@Table(name = "SEX_TOKEN")
+public class Token implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String userName;
+
+    private String password;
+
+    private User user;
 }

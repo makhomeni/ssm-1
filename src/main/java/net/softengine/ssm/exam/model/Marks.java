@@ -1,5 +1,7 @@
 package net.softengine.ssm.exam.model;
 
+import net.softengine.ssm.admin.model.Student;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -18,6 +20,14 @@ public class Marks  implements Serializable{
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
 
+    private MarksSheet marksSheet;
 
+    private Student student;
+
+    private String written;
+
+    private String mcq;
+
+    private String practical;
 
 }

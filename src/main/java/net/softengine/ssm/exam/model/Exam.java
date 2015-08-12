@@ -2,9 +2,10 @@ package net.softengine.ssm.exam.model;
 
 import net.softengine.ssm.security.model.User;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,5 +19,12 @@ import java.io.Serializable;
 @Table( name = "EX_EXAM")
 public class Exam implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String name;
+
+    List<MarksConfig> marksConfigList = new ArrayList<MarksConfig>();
 
 }

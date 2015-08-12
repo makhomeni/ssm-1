@@ -1,5 +1,11 @@
 package net.softengine.ssm.exam.model;
 
+import net.softengine.ssm.admin.model.Klass;
+import net.softengine.ssm.admin.model.Subject;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: SHAHIN_PC
@@ -7,5 +13,17 @@ package net.softengine.ssm.exam.model;
  * Time: 11:00 PM
  * To change this template use File | Settings | File Templates.
  */
-public class MarksSheet {
+@Entity
+@Table(name ="EX_MARKS_SHEET")
+public class MarksSheet implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private Klass klass;
+
+    private Subject subject;
+
+    private Exam exam;
 }

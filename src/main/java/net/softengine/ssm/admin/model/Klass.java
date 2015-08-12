@@ -4,6 +4,7 @@ import net.softengine.ssm.security.model.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,11 +21,13 @@ public class Klass extends User implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    List<Student> studentList;
+    private String name;
 
-    List<Subject> subjectList;
+    List<Student> studentList = new ArrayList<Student>();
 
-    Teacher classTeacher;
+    List<Subject> subjectList = new ArrayList<Subject>();
+
+    private Teacher classTeacher;
 
     private Long gpDevidedBy;
 

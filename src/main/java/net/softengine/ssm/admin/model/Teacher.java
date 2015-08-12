@@ -18,4 +18,5 @@ public class Teacher implements Serializable {
     private String type;
 
     private String designation;
+
 }

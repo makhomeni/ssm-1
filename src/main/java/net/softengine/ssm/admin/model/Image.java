@@ -1,18 +1,15 @@
 package net.softengine.ssm.admin.model;
 
-import net.softengine.ssm.security.model.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "AD_IMAGE")
 public class Image implements Serializable {
     @Id
-    @GeneratedValue(strateg = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String docOf;
@@ -30,7 +27,7 @@ public class Image implements Serializable {
     private Date recordDate;
 
     @OneToOne(mappedBy = "image")
-    Student student;
+    private Student student;
 
 
 }

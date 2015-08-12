@@ -4,6 +4,8 @@ import net.softengine.ssm.security.model.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,4 +21,10 @@ public class Subject implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
+
+    private String name;
+
+    private Long subjectCode;
+
+    List<Klass> klassList = new ArrayList<Klass>();
 }
